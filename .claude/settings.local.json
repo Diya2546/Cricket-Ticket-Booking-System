@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"team\\\\|logo\\\\|icon\" /c/xampp/htdocs/cricket-ticket-booking/*.css --include=\"*.css\")",
+      "Bash(xargs grep:*)",
+      "Bash(grep -r \"logo\\\\|team.*logo\\\\|team.*image\\\\|team.*icon\" /c/xampp/htdocs/cricket-ticket-booking/admin/*.php)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(find /c/xampp/htdocs/cricket-ticket-booking -type f -name .env* -o -name *secret* -o -name *token*)"
+    ]
+  }
+}
