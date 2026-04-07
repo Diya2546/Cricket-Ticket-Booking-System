@@ -9,7 +9,13 @@
       "Bash(git add:*)",
       "Bash(git rm:*)",
       "Bash(git commit:*)",
-      "Bash(find /c/xampp/htdocs/cricket-ticket-booking -type f -name .env* -o -name *secret* -o -name *token*)"
+      "Bash(find /c/xampp/htdocs/cricket-ticket-booking -type f -name .env* -o -name *secret* -o -name *token*)",
+      "Bash(git diff:*)",
+      "Bash(grep -iE \"\\\\.env|\\\\.sql|credential|secret|key\\\\.pem|\\\\.key$\")",
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "Bash(grep -E \"\\\\.php$|^d\")",
+      "Bash(gh repo:*)"
     ]
   }
 }
