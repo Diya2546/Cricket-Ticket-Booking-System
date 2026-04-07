@@ -49,7 +49,39 @@ A full-stack web application for online cricket match ticket booking with user a
 
 ## Screenshots
 
-> Add your project screenshots here
+### Home Page
+![Home Page](screenshots/home-page.jpeg)
+
+### Seat Selection
+![Seat Selection](screenshots/seat-selection.jpeg)
+
+### Booking Page
+![Booking Page](screenshots/booking-page.jpeg)
+
+### Booking Confirmation
+![Booking Confirmation](screenshots/Booking%20Confirmation.jpeg)
+
+### My Bookings
+![My Bookings](screenshots/MyBookings.jpeg)
+
+### Digital Ticket with QR Code
+![Ticket QR](screenshots/TicketQR.jpeg)
+
+### OTP Verification
+![OTP Verification](screenshots/otp-verification.jpeg)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.jpeg)
+
+### Manage Matches
+![Manage Matches](screenshots/manage-matches.jpeg)
+
+### Manage Bookings
+![Manage Bookings](screenshots/manage-Bookings.jpeg)
+
+### Reports
+![Reports 1](screenshots/report-1.jpeg)
+![Reports 2](screenshots/report-2.jpeg)
 
 ## Installation & Setup
 
@@ -61,12 +93,12 @@ A full-stack web application for online cricket match ticket booking with user a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Diya2546/Cricket-Ticket-booking-.git
+   git clone https://github.com/Diya2546/Cricket-Ticket-Booking-System.git
    ```
 
 2. **Move to XAMPP htdocs folder**
    ```bash
-   cp -r Cricket-Ticket-booking- C:/xampp/htdocs/cricket-ticket-booking
+   cp -r Cricket-Ticket-Booking-System C:/xampp/htdocs/cricket-ticket-booking
    ```
 
 3. **Import the database**
