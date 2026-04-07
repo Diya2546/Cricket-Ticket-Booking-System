@@ -47,42 +47,6 @@ A full-stack web application for online cricket match ticket booking with user a
 | Email | PHPMailer (Gmail SMTP) |
 | Server | Apache (XAMPP) |
 
-## Screenshots
-
-### Home Page
-![Home Page](screenshots/home-page.jpeg)
-
-### Booking Page
-![Booking Page](screenshots/booking-page.jpeg)
-
-### Seat Selection
-![Seat Selection](screenshots/seat-selection.jpeg)
-
-### Booking Confirmation
-![Booking Confirmation](screenshots/Booking%20Confirmation.jpeg)
-
-### My Bookings
-![My Bookings](screenshots/MyBookings.jpeg)
-
-### Digital Ticket with QR Code
-![Ticket QR](screenshots/TicketQR.jpeg)
-
-### OTP Verification
-![OTP Verification](screenshots/otp-verification.jpeg)
-
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.jpeg)
-
-### Manage Matches
-![Manage Matches](screenshots/manage-matches.jpeg)
-
-### Manage Bookings
-![Manage Bookings](screenshots/manage-Bookings.jpeg)
-
-### Reports
-![Reports 1](screenshots/report-1.jpeg)
-![Reports 2](screenshots/report-2.jpeg)
-
 ## Installation & Setup
 
 ### Prerequisites
