@@ -52,11 +52,11 @@ A full-stack web application for online cricket match ticket booking with user a
 ### Home Page
 ![Home Page](screenshots/home-page.jpeg)
 
-### Seat Selection
-![Seat Selection](screenshots/seat-selection.jpeg)
-
 ### Booking Page
 ![Booking Page](screenshots/booking-page.jpeg)
+
+### Seat Selection
+![Seat Selection](screenshots/seat-selection.jpeg)
 
 ### Booking Confirmation
 ![Booking Confirmation](screenshots/Booking%20Confirmation.jpeg)
