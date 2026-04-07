@@ -1,2 +1,4 @@
 config/smtp_config.php
 newDB/
+booknow.php
+booknow_backup.php
