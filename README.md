@@ -149,72 +149,7 @@ The database `cricket_ticket` contains the following tables:
 | `notifications` | User notification messages |
 | `otp_verifications` | OTP codes for password reset |
 
-## Real-Time Seat Booking System
 
-The core of this project is a **real-time seat booking system** that prevents double-booking and keeps seat availability updated across all users.
-
-### How It Works
-
-```
-User opens booking page
-        |
-        v
-+---------------------------+
-|  Load seat grid (A1-F8)   |
-|  Fetch booked seats from  |
-|  database (confirmed +    |
-|  paid bookings only)      |
-+---------------------------+
-        |
-        v
-+---------------------------+
-|  AJAX polling every 5s    |  <-- get-booked-seats.php returns
-|  Updates booked seats     |      latest data in real-time
-|  in real-time             |
-+---------------------------+
-        |
-        v
-+---------------------------+
-|  User selects seats       |
-|  - Booked seats blocked   |
-|  - If another user books  |
-|    a selected seat during |
-|    polling, it auto-      |
-|    deselects with alert   |
-+---------------------------+
-        |
-        v
-+---------------------------+
-|  User clicks "Proceed"    |
-|  PRE-SUBMIT VALIDATION:   |
-|  Final AJAX check against |
-|  server for conflicts     |
-|  - If conflict: blocked   |
-|  - If clear: submit form  |
-+---------------------------+
-        |
-        v
-+---------------------------+
-|  SERVER-SIDE (PHP + MySQL)|
-|  BEGIN TRANSACTION         |
-|  1. Re-verify seats are   |
-|     still available       |
-|  2. If conflict: ROLLBACK |
-|  3. If clear:             |
-|     - INSERT booking      |
-|     - INSERT booking_items|
-|     - UPDATE seat count   |
-|     - INSERT payment      |
-|     - COMMIT              |
-+---------------------------+
-        |
-        v
-+---------------------------+
-|  Booking Confirmed        |
-|  Show digital ticket      |
-|  with QR code             |
-+---------------------------+
-```
 
 ### Three Layers of Double-Booking Prevention
 
