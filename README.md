@@ -149,15 +149,110 @@ The database `cricket_ticket` contains the following tables:
 | `notifications` | User notification messages |
 | `otp_verifications` | OTP codes for password reset |
 
-## How It Works
+## Real-Time Seat Booking System
+
+The core of this project is a **real-time seat booking system** that prevents double-booking and keeps seat availability updated across all users.
+
+### How It Works
+
+```
+User opens booking page
+        |
+        v
++---------------------------+
+|  Load seat grid (A1-F8)   |
+|  Fetch booked seats from  |
+|  database (confirmed +    |
+|  paid bookings only)      |
++---------------------------+
+        |
+        v
++---------------------------+
+|  AJAX polling every 5s    |  <-- get-booked-seats.php returns
+|  Updates booked seats     |      latest data in real-time
+|  in real-time             |
++---------------------------+
+        |
+        v
++---------------------------+
+|  User selects seats       |
+|  - Booked seats blocked   |
+|  - If another user books  |
+|    a selected seat during |
+|    polling, it auto-      |
+|    deselects with alert   |
++---------------------------+
+        |
+        v
++---------------------------+
+|  User clicks "Proceed"    |
+|  PRE-SUBMIT VALIDATION:   |
+|  Final AJAX check against |
+|  server for conflicts     |
+|  - If conflict: blocked   |
+|  - If clear: submit form  |
++---------------------------+
+        |
+        v
++---------------------------+
+|  SERVER-SIDE (PHP + MySQL)|
+|  BEGIN TRANSACTION         |
+|  1. Re-verify seats are   |
+|     still available       |
+|  2. If conflict: ROLLBACK |
+|  3. If clear:             |
+|     - INSERT booking      |
+|     - INSERT booking_items|
+|     - UPDATE seat count   |
+|     - INSERT payment      |
+|     - COMMIT              |
++---------------------------+
+        |
+        v
++---------------------------+
+|  Booking Confirmed        |
+|  Show digital ticket      |
+|  with QR code             |
++---------------------------+
+```
+
+### Three Layers of Double-Booking Prevention
+
+| Layer | Where | How |
+|-------|-------|-----|
+| **1. Real-Time Polling** | Client (JavaScript) | AJAX call to `get-booked-seats.php` every 5 seconds updates the seat grid. If another user books a seat you selected, it auto-deselects and alerts you. |
+| **2. Pre-Submit Validation** | Client (JavaScript) | Just before form submission, a final AJAX request checks for conflicts. If any selected seat was booked in the last few seconds, submission is blocked. |
+| **3. Database Transaction** | Server (PHP + MySQL) | Inside a `BEGIN TRANSACTION`, the server re-queries all booked seats. If a conflict is found, the entire transaction is rolled back. Seat count is decremented atomically with `WHERE no_of_seats >= quantity`. |
+
+### Key Implementation Details
+
+- **Seat Grid**: 6 rows (A-F) x 8 seats per row = 48 seats per category
+- **Seat States**: Available (clickable) / Booked (red, blocked) / Selected (green, user's pick)
+- **Polling Endpoint**: `get-booked-seats.php` with cache-busting (`t=${Date.now()}`)
+- **Atomic Seat Update**: `UPDATE venue_category SET no_of_seats = no_of_seats - $qty WHERE no_of_seats >= $qty` prevents overselling
+- **Booking Code Format**: `CT` + timestamp + 3-digit random (e.g., `CT20260319093548944`)
+- **Only Confirmed Bookings Count**: Cancelled/failed bookings don't block seats
+
+### Pricing Calculation
+
+```
+Base Price     = Unit Price x Quantity
+Convenience Fee = Base Price x 2%
+GST            = Base Price x 18%
+─────────────────────────────────
+Total Amount   = Base Price + Convenience Fee + GST
+```
+
+## User Flow
 
 1. **Register** with name, email, phone, and password
 2. **Verify email** via the verification link sent to your inbox
 3. **Browse matches** on the homepage
-4. **Select seats** by category and quantity
+4. **Select seats** by category and quantity (real-time availability)
 5. **Make payment** via UPI, Card, Net Banking, or Wallet
 6. **View digital ticket** with QR code
-7. **Give feedback** after attending the match
+7. **Cancel booking** before the cancellation deadline (if needed)
+8. **Give feedback** after attending the match
 
 ## License
 
