@@ -133,8 +133,7 @@ Interested in purchasing, customizing, or learning more about this project?
 
 | Method | Details |
 |---|---|
-| 📧 **Email** | *(Add your email here)* |
-| 💬 **WhatsApp** | *(Add your number here)* |
+| 📧 **Email** | diyakotadiya2504@gmail.com |
 | 🐙 **GitHub** | [github.com/Diya2546](https://github.com/Diya2546) |
 
 > 📝 When contacting, please mention:
