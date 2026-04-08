@@ -1,161 +1,180 @@
-# Cricket Ticket Booking System
+<div align="center">
 
-A full-stack web application for online cricket match ticket booking with user and admin panels, built using PHP, MySQL, and Bootstrap/Tailwind CSS.
+# 🏏 Cricket Ticket Booking System
 
-## Features
+### A Full-Stack Web Application | Demo & Paid Project
 
-### User Panel
-- **User Registration & Login** with email verification
-- **Browse Matches** - View upcoming, live, and completed cricket matches (T20, ODI, Test, IPL, World Cup)
-- **Book Tickets** - Interactive seat selection with multiple categories (VIP, Premium, General, Platinum, Economy)
-- **Payment Processing** - Supports UPI, Card, Net Banking, Wallet with automatic GST & convenience fee calculation
-- **My Bookings** - View, track, and cancel bookings
-- **Digital Tickets** - View and print tickets with QR code
-- **Feedback System** - Rate and review matches after attending
-- **Notifications** - Real-time notifications for bookings, cancellations, and payments
-- **Profile Management** - Edit profile, upload photo, change password
-- **Forgot Password** - OTP-based password reset via email
+[![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-10.4+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-### Admin Panel
-- **Dashboard** - Real-time stats: total users, bookings, matches, revenue
-- **Match Management** - Create, edit, delete matches with team and venue assignment
-- **Team & Venue Management** - Add teams with logos, venues with capacity and seat categories
-- **Booking Management** - View all bookings, payment status, booking details
-- **User Management** - View, search, and manage registered users
-- **Seat Category & Pricing** - Configure seat categories, pricing, and amenities per venue
-- **Feedback Management** - View user feedback, export to CSV
-- **Reports & Analytics** - Revenue reports, booking statistics, data export
+> ⚠️ **This is a portfolio/demo repository.**
+> The full source code is **not publicly available**.
+> It is available for **purchase or customization** — see [How to Get the Full Project](#-how-to-get-the-full-project) below.
 
-### Security
-- Password hashing with BCRYPT
-- Email verification for new accounts
-- OTP-based password reset (6-digit code, 10-min expiry)
-- SQL injection prevention with prepared statements
-- Session-based authentication
-- Login alert emails
+</div>
 
-## Tech Stack
+---
+
+## 📌 Project Overview
+
+**Cricket Ticket Booking System** is a complete, production-ready web application that allows cricket fans to browse matches, select seats interactively, and book tickets online — all with a clean UI and a powerful admin panel.
+
+Built as a real-world project using **PHP, MySQL, Bootstrap, and Tailwind CSS**, it covers everything from user authentication and seat selection to QR-coded digital tickets and revenue analytics.
+
+This project is ideal for:
+- 🎓 College final-year project submissions
+- 💼 Portfolio demonstration
+- 🛒 Purchase & customization for your own use
+
+---
+
+## ✨ Features
+
+### 👤 User Panel
+
+| Feature | Description |
+|---|---|
+| 🔐 Registration & Login | Email verification + OTP-based password reset |
+| 🏟️ Browse Matches | View upcoming, live & completed matches (T20, ODI, IPL, World Cup) |
+| 🪑 Seat Selection | Real-time interactive seat map with categories |
+| 💳 Payment | UPI, Card, Net Banking, Wallet + auto GST & convenience fee |
+| 🎫 Digital Tickets | QR-coded tickets, printable & mobile-ready |
+| 📋 My Bookings | View booking history, cancel with deadline check |
+| 💬 Feedback | Rate and review matches after attending |
+| 🔔 Notifications | Real-time alerts for bookings, payments, cancellations |
+| 👤 Profile | Edit details, upload photo, change password |
+
+### 🛠️ Admin Panel
+
+| Feature | Description |
+|---|---|
+| 📊 Dashboard | Live stats — users, bookings, matches, revenue |
+| 🏏 Match Management | Add/edit/delete matches with team & venue assignment |
+| 🏟️ Team & Venue | Manage teams with logos, venues with seat categories |
+| 📦 Booking Management | View all bookings, payment status |
+| 👥 User Management | Search and manage registered users |
+| 💰 Pricing Control | Configure seat types, pricing & amenities per venue |
+| 📣 Feedback Manager | View user reviews, export to CSV |
+| 📈 Reports & Analytics | Revenue charts, booking stats, data exports |
+
+---
+
+## 🧰 Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
-| Backend | PHP 8.2+ |
-| Database | MySQL / MariaDB 10.4+ |
-| Frontend | HTML5, CSS3, JavaScript |
-| CSS Frameworks | Tailwind CSS, Bootstrap 5.3 |
-| Icons | Font Awesome 6.4 |
-| JS Library | jQuery 3.7.1 |
-| Email | PHPMailer (Gmail SMTP) |
-| Server | Apache (XAMPP) |
+|---|---|
+| **Backend** | PHP 8.2+ |
+| **Database** | MySQL / MariaDB 10.4+ |
+| **Frontend** | HTML5, CSS3, JavaScript |
+| **CSS Frameworks** | Bootstrap 5.3 + Tailwind CSS 3.x |
+| **Icons** | Font Awesome 6.4 |
+| **JS Library** | jQuery 3.7.1 |
+| **Email** | PHPMailer (Gmail SMTP) |
+| **Server** | Apache (XAMPP) |
+| **Authentication** | Session-based + BCRYPT password hashing |
 
-## Installation & Setup
+---
 
-### Prerequisites
-- [XAMPP](https://www.apachefriends.org/) (PHP 8.2+, MySQL/MariaDB, Apache)
-- Git
+## 🖼️ Project Demo
 
-### Steps
+> 💡 **This is a demo/portfolio showcase.**
+> The live application includes a fully functional user-facing booking flow and a complete admin panel — including match creation, seat management, payment simulation, and report generation.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Diya2546/Cricket-Ticket-Booking-System.git
-   ```
+**Key screens include:**
 
-2. **Move to XAMPP htdocs folder**
-   ```bash
-   cp -r Cricket-Ticket-Booking-System C:/xampp/htdocs/cricket-ticket-booking
-   ```
+- 🏠 **Home Page** — Match listings with filters by type & status
+- 🎟️ **Booking Page** — Interactive seat selector with pricing breakdown
+- ✅ **Confirmation Page** — Payment summary + QR code ticket
+- 📱 **Mobile Ticket View** — Scan-ready ticket for entry validation
+- 🛠️ **Admin Dashboard** — Real-time data with charts & analytics
 
-3. **Import the database**
-   - Open phpMyAdmin: `http://localhost/phpmyadmin`
-   - Create a new database named `cricket_ticket`
-   - Import the file: `database/cricket_ticket.sql`
+> _Screenshots and a live demo are available upon request when contacting for purchase._
 
-4. **Configure SMTP (for email features)**
-   - Create the file `config/smtp_config.php`:
-     ```php
-     <?php
-     return [
-         "Host"      => "smtp.gmail.com",
-         "Port"      => 587,
-         "User"      => "your-email@gmail.com",
-         "Password"  => "your-16-digit-app-password",
-         "FromEmail" => "your-email@gmail.com",
-         "FromName"  => "Cricket Ticket Booking"
-     ];
-     ```
-   - To get a 16-digit app password: Google Account > Security > 2-Step Verification > App Passwords
+---
 
-5. **Start Apache and MySQL** from XAMPP Control Panel
+## 💼 How to Get the Full Project
 
-6. **Open in browser**
-   ```
-   http://localhost/cricket-ticket-booking
-   ```
+> 🔒 **Full source code is not publicly shared in this repository.**
 
-### Default Admin Login
-- **Username:** admin
-- **Password:** admin123
+To get the complete project — including all PHP source files, database schema, configuration, and setup guide — please contact me directly.
 
-## Project Structure
+### 📦 What You'll Receive
 
-```
-cricket-ticket-booking/
-├── admin/                    # Admin panel (dashboard, matches, users, bookings, reports)
-├── assets/                   # CSS & JS libraries (Bootstrap, jQuery)
-├── config/                   # SMTP configuration
-├── css/                      # Custom stylesheets
-├── database/                 # SQL schema with sample data
-├── image/                    # Team logos, venue & match images
-├── models/                   # PHP models (Booking, Match, User)
-├── PHPMailer/                # Email library
-├── services/                 # EmailService for notifications
-├── uploads/                  # User profile pictures
-├── userLogin/                # Registration page assets
-├── index.php                 # Homepage with match listings
-├── booking.php               # Seat selection & booking
-├── booking-confirmation.php  # Payment & confirmation
-├── ticket-view.php           # Digital ticket with QR code
-├── MyBooking.php             # User's booking history
-├── matches.php               # Browse all matches
-├── login.php                 # User & admin login
-├── register.php              # User registration
-├── profile.php               # User profile
-├── feedback.php              # Match feedback & ratings
-├── connection.php            # Database connection
-└── verify_email.php          # Email verification
-```
+- ✅ Complete PHP source code (all pages, admin panel, APIs)
+- ✅ MySQL database file (`.sql`) with sample data
+- ✅ Setup & configuration guide (step-by-step)
+- ✅ PHPMailer integration + SMTP config template
+- ✅ All assets (CSS, JS, images, icons)
 
-## Database Schema
+### 💰 Pricing
 
-The database `cricket_ticket` contains the following tables:
+| Plan | Includes | Price |
+|---|---|---|
+| **Basic** | Full source code + DB + setup guide | ₹499 – ₹999 |
+| **Custom** | Full code + modifications as per your needs | Contact for quote |
 
-| Table | Description |
-|-------|-------------|
-| `admins` | Admin accounts with roles |
-| `users` | Registered users with verification status |
-| `teams` | Cricket teams with logos |
-| `venues` | Stadiums with capacity |
-| `matches` | Scheduled matches with teams and venues |
-| `seat_categories` | Ticket categories (VIP, General, etc.) |
-| `venue_category` | Seat allocation and pricing per venue |
-| `bookings` | User ticket bookings |
-| `booking_items` | Individual seats per booking |
-| `payments` | Payment transactions |
-| `feedback` | User ratings and reviews |
-| `notifications` | User notification messages |
-| `otp_verifications` | OTP codes for password reset |
+> _Prices are negotiable. Student discounts available._
 
-## How It Works
+### 📬 Delivery Methods
 
-1. **Register** with name, email, phone, and password
-2. **Verify email** via the verification link sent to your inbox
-3. **Browse matches** on the homepage
-4. **Select seats** by category and quantity (real-time availability)
-5. **Make payment** via UPI, Card, Net Banking, or Wallet
-6. **View digital ticket** with QR code
-7. **Cancel booking** before the cancellation deadline (if needed)
-8. **Give feedback** after attending the match
+Once payment is confirmed, the project will be delivered via any of the following:
 
-## License
+- 📁 **ZIP File** via Email
+- 🔗 **Private GitHub Repository** access (temporary or permanent)
+- ☁️ **Google Drive** shared link
 
-This project is open source and available for educational purposes.
+---
+
+## 📞 Contact
+
+Interested in purchasing, customizing, or learning more about this project?
+
+| Method | Details |
+|---|---|
+| 📧 **Email** | *(Add your email here)* |
+| 💬 **WhatsApp** | *(Add your number here)* |
+| 🐙 **GitHub** | [github.com/Diya2546](https://github.com/Diya2546) |
+
+> 📝 When contacting, please mention:
+> - Your purpose (college project / personal use / customization)
+> - Your preferred delivery method
+> - Any customizations needed
+
+---
+
+## ⚠️ Disclaimer
+
+> This project is built for **learning, demonstration, and portfolio purposes.**
+>
+> - ❌ This project is **not intended for academic dishonesty** (e.g., submitting as your own in exams without understanding it).
+> - ✅ It is meant to **help students learn** full-stack PHP development through a real-world example.
+> - 📌 By purchasing or using this project, you agree to use it **responsibly and ethically**.
+> - 🔒 Reselling or redistributing this project without permission is **not allowed**.
+>
+> _The author is not responsible for any misuse of this project._
+
+---
+
+## 🗂️ What's in This Public Repository
+
+To protect the full implementation, this public repo contains:
+
+| Visible | Hidden / Not Shared Publicly |
+|---|---|
+| ✅ `README.md` (this file) | ❌ Full PHP business logic |
+| ✅ Project description & features | ❌ Admin panel source code |
+| ✅ Tech stack info | ❌ Database schema (`.sql`) |
+| ✅ Folder structure overview | ❌ Config files & credentials |
+| ✅ Screenshots (on request) | ❌ Payment flow implementation |
+
+---
+
+<div align="center">
+
+**⭐ If you found this project useful, consider starring this repo!**
+
+Made with ❤️ using PHP, MySQL & Bootstrap
+
+</div>
