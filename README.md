@@ -103,7 +103,7 @@ Cricket Ticket Booking System is a modern web application that allows users to e
 
 🔓 Full working version available as **paid package**
 
-### 💵 Price: ₹999
+### 💵 Price: ₹1000
 
 ### 📦 What You Will Get:
 
