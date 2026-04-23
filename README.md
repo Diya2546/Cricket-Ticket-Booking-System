@@ -4,14 +4,15 @@
 
 ### A Full-Stack Web Application | Demo & Paid Project
 
+Built using PHP, MySQL, Bootstrap & Tailwind CSS
+
 [![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge\&logo=php\&logoColor=white)](https://www.php.net/)
 [![MySQL](https://img.shields.io/badge/MySQL-10.4+-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)](https://www.mysql.com/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge\&logo=bootstrap\&logoColor=white)](https://getbootstrap.com/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?style=for-the-badge\&logo=tailwindcss\&logoColor=white)](https://tailwindcss.com/)
 
-> ⚠️ **This is a portfolio/demo repository.**
-> The full source code is **not publicly available**.
-> It is available as a **paid project** — see below.
+> 🚀 This is a **portfolio/demo repository**
+> 🔒 Full access to the complete working project is **NOT included**
 
 </div>
 
@@ -19,63 +20,94 @@
 
 ## 📌 Project Overview
 
-**Cricket Ticket Booking System** is a complete, production-ready web application that allows cricket fans to browse matches, select seats interactively, and book tickets online — all with a clean UI and a powerful system.
+Cricket Ticket Booking System is a modern web application that allows users to explore cricket matches, understand the booking flow, and experience a real-world ticket booking interface.
 
-Built using **PHP, MySQL, Bootstrap, and Tailwind CSS**, it demonstrates real-world development concepts including authentication, booking systems, and email integration.
+### 🔍 This project demonstrates:
 
----
+* Clean UI/UX design
+* Booking system architecture
+* Authentication flow concept
+* Email notification integration
+* Modular PHP structure
 
-## ✨ Features
+### 🎯 Ideal For:
 
-### 👤 User Panel
-
-| Feature                 | Description                                   |
-| ----------------------- | --------------------------------------------- |
-| 🔐 Registration & Login | Email verification + OTP-based password reset |
-| 🏟️ Browse Matches      | View upcoming, live & completed matches       |
-| 🪑 Seat Selection       | Interactive seat map with categories          |
-| 💳 Payment              | Simulated payment system                      |
-| 🎫 Digital Tickets      | QR-based ticket system                        |
-| 📋 My Bookings          | Booking history                               |
-| 💬 Feedback             | User feedback system                          |
-| 👤 Profile              | Profile management                            |
+* 🎓 College final-year projects
+* 💼 Portfolio demonstration
+* 🛒 Purchase & use
 
 ---
 
-### 🛠️ Admin Panel *(Full version only)*
+## ⚠️ Demo Version Notice
 
-| Feature               | Description              |
-| --------------------- | ------------------------ |
-| 📊 Dashboard          | Users, bookings, revenue |
-| 🏏 Match Management   | Add/edit/delete matches  |
-| 📦 Booking Management | Manage bookings          |
-| 👥 User Management    | Manage users             |
-| 📈 Reports            | Analytics & stats        |
+> ❗ This repository contains a **limited/demo version**
+
+* Database connection is not fully functional
+* SMTP (email) configuration is not included
+* Some backend features are restricted
+* Admin panel is not included
+
+🔐 **Full working project is available as a paid version**
+
+👉 Contact to get full access
 
 ---
 
-## 🧰 Tech Stack
+## ✨ Features (Demo Showcase)
 
-| Layer    | Technology            |
-| -------- | --------------------- |
-| Backend  | PHP                   |
-| Database | MySQL                 |
-| Frontend | HTML, CSS, JavaScript |
-| CSS      | Bootstrap + Tailwind  |
-| Email    | PHPMailer             |
-| Server   | XAMPP                 |
+### 👤 User Features
+
+* Browse cricket matches (Upcoming / Live / Completed)
+* View match details and booking interface
+* Profile & booking pages (UI demo)
+* Feedback system
+* Email notification structure
+
+---
+
+### 🛠️ System Features
+
+* Organized PHP structure
+* PHPMailer integration
+* Responsive UI (Bootstrap + Tailwind)
+* Clean design
+* Modular architecture
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer    | Technology               |
+| -------- | ------------------------ |
+| Backend  | PHP                      |
+| Database | MySQL (Not Included)     |
+| Frontend | HTML5, CSS3, JavaScript  |
+| CSS      | Bootstrap + Tailwind CSS |
+| Icons    | Font Awesome             |
+| Email    | PHPMailer                |
+| Server   | Apache (XAMPP)           |
+
+---
+
+## 🎬 Project Flow (Concept)
+
+1. User browses matches
+2. Selects match
+3. Booking UI experience
+4. Profile & feedback
+5. Email system concept
 
 ---
 
 ## 💰 Pricing & Full Access
 
-🔓 The complete working project is available as a **paid package**
+🔓 Full working version available as **paid package**
 
 ### 💵 Price: ₹999
 
 ### 📦 What You Will Get:
 
-* ✅ Full source code (Frontend + Backend)
+* ✅ Full frontend + backend source code
 * ✅ Admin panel (complete access)
 * ✅ MySQL database file (.sql)
 * ✅ Fully working project
@@ -94,27 +126,79 @@ Built using **PHP, MySQL, Bootstrap, and Tailwind CSS**, it demonstrates real-wo
 
 📩 **Contact to purchase full access**
 
+💡 *Student-friendly pricing*
+
+---
+
+## 📧 Email (SMTP) Configuration Setup
+
+### 📁 Step 1: Create File
+
+config/smtp_config.php
+
+---
+
+### 🧾 Step 2: Add Code
+
+```php
+<?php
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_USERNAME', 'your_email@gmail.com');
+define('SMTP_PASSWORD', 'your_app_password');
+define('SMTP_PORT', 587);
+define('SMTP_FROM_EMAIL', 'your_email@gmail.com');
+define('SMTP_FROM_NAME', 'Cricket Ticket Booking');
+?>
+```
+
+---
+
+### 🔐 Step 3: Generate Gmail App Password
+
+1. Go to https://myaccount.google.com
+2. Enable 2-Step Verification
+3. Open App Passwords
+4. Generate password
+5. Use in SMTP_PASSWORD
+
+---
+
+### ❌ Important
+
+* Do NOT use Gmail password
+* Use App Password only
+* Never upload credentials
+
 ---
 
 ## 📬 Contact
 
-| Method    | Details                                                         |
-| --------- | --------------------------------------------------------------- |
-| 📧 Email  | [diyakotadiya2504@gmail.com](mailto:diyakotadiya2504@gmail.com) |
-| 🐙 GitHub | https://github.com/Diya2546                                     |
+* GitHub: https://github.com/Diya2546
+* 📧 Email: [diyakotadiya2504@gmail.com](mailto:diyakotadiya2504@gmail.com)
+
+👉 Mention:
+
+* Purpose (college / learning)
 
 ---
 
 ## ⚠️ Disclaimer
 
-* This project is for **learning and demonstration purposes**
-* Full functionality is not included in this demo
-* Unauthorized resale is not allowed
+* For learning & demo only
+* Full features not included
+* No resale allowed
+
+---
+
+## 📄 License
+
+Not open source
+All rights reserved
 
 ---
 
 <div align="center">
 
-⭐ If you like this project, consider starring the repo!
+⭐ Star this repo if you like it!
 
 </div>
