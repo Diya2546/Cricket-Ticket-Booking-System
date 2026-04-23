@@ -77,15 +77,13 @@ Cricket Ticket Booking System is a modern web application that allows users to e
 
 ## 🛠️ Tech Stack
 
-| Layer    | Technology               |
-| -------- | ------------------------ |
-| Backend  | PHP                      |
-| Database | MySQL (Not Included)     |
-| Frontend | HTML5, CSS3, JavaScript  |
-| CSS      | Bootstrap + Tailwind CSS |
-| Icons    | Font Awesome             |
-| Email    | PHPMailer                |
-| Server   | Apache (XAMPP)           |
+| Layer           | Technology                                       |
+| --------------- | ------------------------------------------------ |
+| Frontend        | HTML5, Tailwind CSS, CSS, JavaScript (jQuery)    |
+| Backend         | PHP (Sessions), MySQLi, PHPMailer                |
+| Database        | MySQL *(via XAMPP / phpMyAdmin)*                 |
+| Server          | Apache (XAMPP)                                   |
+| Libraries/Tools | Swiper.js, Font Awesome, Google Fonts, PHPMailer |
 
 ---
 
@@ -140,7 +138,7 @@ config/smtp_config.php
 
 ### 🧾 Step 2: Add Code
 
-```php
+```php id="smtp123"
 <?php
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_USERNAME', 'your_email@gmail.com');
